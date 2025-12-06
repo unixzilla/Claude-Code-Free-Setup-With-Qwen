@@ -50,7 +50,7 @@ npm install -g @qwen-code/cli
 ### 1. Log In
 In your terminal, run the following command. This will open a browser window for you to log in and authorize the CLI.
 ```bash
-qwen login
+qwen
 ```
 
 ### 2. Find Your Credentials File
