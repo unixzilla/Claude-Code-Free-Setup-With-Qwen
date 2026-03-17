@@ -70,7 +70,12 @@ Open this file. It will look like this:
 ```
 
 ### 3. Copy Your Access Token
-Copy the entire `access_token` value. You will need it in Step 5.
+Copy the entire `access_token` value. e.g.:(MacOS Terminal)
+```
+echo 'export QWEN_ACCESS_TOKEN="sk-xxx"' >> ~/.zshrc
+source ~/.zshrc
+```
+You will need it in Step 5.
 
 ---
 
@@ -143,7 +148,8 @@ Paste this exact JSON content into Notepad, then **save and close** the file.
     "longContext": "qwen,qwen-coder",
     "longContextThreshold": 60000,
     "webSearch": "qwen,qwen-coder"
-  }
+  },
+ "DISABLE_TELEMETRY": true
 }
 ```
 
