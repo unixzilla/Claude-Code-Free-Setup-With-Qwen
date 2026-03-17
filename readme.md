@@ -106,11 +106,12 @@ mkdir %USERPROFILE%\.claude
 ```
 ### macOS / Linux:
 ```bash
-mkdir -p ~/.claude-code-router ~/.claude
+mkdir -p ~/.claude-code-router/plugins ~/.claude
 ```
 *The `-Force` / `-p` flags prevent errors if the folders already exist.*
 
 Goto https://gist.github.com/musistudio/f5a67841ced39912fd99e42200d5ca8b
+
 Copy the code to ~/.claude-code-router/plugins/qwen-cli.js
 
 
