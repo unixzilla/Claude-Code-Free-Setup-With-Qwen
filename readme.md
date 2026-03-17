@@ -72,7 +72,7 @@ Open this file. It will look like this:
 ### 3. Copy Your Access Token
 Copy the entire `access_token` value. e.g.:(MacOS Terminal)
 ```
-echo 'export QWEN_ACCESS_TOKEN="sk-xxx"' >> ~/.zshrc
+echo 'export QWEN_ACCESS_TOKEN="your access_token ~~~"' >> ~/.zshrc
 source ~/.zshrc
 ```
 You will need it in Step 5.
@@ -145,7 +145,7 @@ Paste this exact JSON content into Notepad, then **save and close** the file.
     {
       "name": "qwen",
       "api_base_url": "https://portal.qwen.ai/v1/chat/completions",
-      "api_key": "APIKEY",
+      "api_key": "$QWEN_ACCESS_TOKEN",
       "models": [
         "qwen3-coder-plus"
       ],
@@ -191,7 +191,7 @@ cat > ~/.claude-code-router/config.json << 'EOF'
     {
       "name": "qwen",
       "api_base_url": "https://portal.qwen.ai/v1/chat/completions",
-      "api_key": "APIKEY",
+      "api_key": "$QWEN_ACCESS_TOKEN",
       "models": [
         "qwen3-coder-plus"
       ],
@@ -234,7 +234,7 @@ Now, replace the placeholder in `config.json` with the token you copied in Step 
   ```bash
   nano ~/.claude-code-router/config.json
   ```
-In the file, find the line `"api_key": "API_KEY",` and replace `$QWEN_ACCESS_TOKEN` with your actual token. **Save and exit.**
+In the file, **Save and exit.**
 
 ---
 
