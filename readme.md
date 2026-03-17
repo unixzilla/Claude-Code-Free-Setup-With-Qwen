@@ -36,11 +36,11 @@ Open your terminal and run:
 ```bash
 node --version
 ```
-This must show `v18.0.0` or higher. If not, install it from [nodejs.org](https://nodejs.org).
+This must show `v20.20.0` or higher. If not, install it from [nodejs.org](https://nodejs.org).
 
 ### 2. Install Qwen CLI
 ```powershell
-npm install -g @qwen-code/cli
+npm install -g @qwen-code/qwen-code@latest
 ```
 
 ---
