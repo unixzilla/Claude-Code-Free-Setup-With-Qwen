@@ -234,7 +234,7 @@ Now, replace the placeholder in `config.json` with the token you copied in Step 
   ```bash
   nano ~/.claude-code-router/config.json
   ```
-In the file, find the line `"api_key": "YOUR_QWEN_ACCESS_TOKEN_HERE",` and replace `YOUR_QWEN_ACCESS_TOKEN_HERE` with your actual token. **Save and exit.**
+In the file, find the line `"api_key": "API_KEY",` and replace `$QWEN_ACCESS_TOKEN` with your actual token. **Save and exit.**
 
 ---
 
