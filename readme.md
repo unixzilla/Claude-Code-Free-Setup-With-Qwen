@@ -54,7 +54,7 @@ qwen
 ```
 
 ### 2. Find Your Credentials File
-After logging in, the CLI creates a file containing your access token.
+After logging in(I use OAuth, it will sign in with your qwen.ai account in a browser.), the CLI creates a file containing your access token.
 - **Windows:** `%USERPROFILE%\.qwen\oauth_creds.json`
 - **macOS/Linux:** `~/.qwen/oauth_creds.json`
 
