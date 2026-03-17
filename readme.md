@@ -10,7 +10,7 @@ This guide provides the simplest and most reliable method to run **Claude Code c
 ✔ macOS Terminal
 ✔ Linux Bash
 
-All steps tested & verified as of December 2025.
+All steps tested & verified as of March 2026.
 
 ⚠️ **Most Common Problem Fixed**
 Other guides may use OS-specific commands or assume prior setup, which can cause confusion. This guide gives **100% correct commands for each OS separately**.
