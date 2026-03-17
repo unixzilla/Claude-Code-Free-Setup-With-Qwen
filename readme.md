@@ -110,6 +110,10 @@ mkdir -p ~/.claude-code-router ~/.claude
 ```
 *The `-Force` / `-p` flags prevent errors if the folders already exist.*
 
+Goto https://gist.github.com/musistudio/f5a67841ced39912fd99e42200d5ca8b
+Copy the code to ~/.claude-code-router/plugins/qwen-cli.js
+
+
 ---
 
 ## 🔥 STEP 4 — CREATE `config.json` (Correct For Each OS)
@@ -131,26 +135,40 @@ Paste this exact JSON content into Notepad, then **save and close** the file.
   "HOST": "127.0.0.1",
   "PORT": 3456,
   "API_TIMEOUT_MS": 600000,
+  "transformers": [
+    {
+      "path": "/Users/XXX/.claude-code-router/plugins/qwen-cli.js"
+    }
+  ],
   "Providers": [
     {
       "name": "qwen",
       "api_base_url": "https://portal.qwen.ai/v1/chat/completions",
-      "api_key": "YOUR_QWEN_ACCESS_TOKEN_HERE",
+      "api_key": "APIKEY",
       "models": [
-        "qwen-coder"
-      ]
+        "qwen3-coder-plus"
+      ],
+      "transformer": {
+        "use": [
+          "qwen-cli"
+        ],
+        "qwen3-coder-plus": {
+          "use": [
+            "enhancetool"
+          ]
+        }
+      }
     }
   ],
   "Router": {
-    "default": "qwen,qwen-coder",
-    "background": "qwen,qwen-coder",
-    "think": "qwen,qwen-coder",
-    "longContext": "qwen,qwen-coder",
+    "default": "qwen,qwen3-coder-plus",
+    "background": "qwen,qwen3-coder-plus",
+    "think": "qwen,qwen3-coder-plus",
+    "longContext": "qwen,qwen3-coder-plus",
     "longContextThreshold": 60000,
-    "webSearch": "qwen,qwen-coder"
+    "webSearch": "qwen,qwen3-coder-plus"
   },
- "DISABLE_TELEMETRY": true
-}
+  "DISABLE_TELEMETRY": true
 ```
 
 ### 🟩 macOS / Linux — Use `cat`
@@ -163,24 +181,40 @@ cat > ~/.claude-code-router/config.json << 'EOF'
   "HOST": "127.0.0.1",
   "PORT": 3456,
   "API_TIMEOUT_MS": 600000,
+   "transformers": [
+    {
+      "path": "/Users/XXX/.claude-code-router/plugins/qwen-cli.js"
+    }
+  ],
   "Providers": [
     {
       "name": "qwen",
       "api_base_url": "https://portal.qwen.ai/v1/chat/completions",
-      "api_key": "YOUR_QWEN_ACCESS_TOKEN_HERE",
+      "api_key": "APIKEY",
       "models": [
-        "qwen-coder"
-      ]
+        "qwen3-coder-plus"
+      ],
+      "transformer": {
+        "use": [
+          "qwen-cli"
+        ],
+        "qwen3-coder-plus": {
+          "use": [
+            "enhancetool"
+          ]
+        }
+      }
     }
   ],
   "Router": {
-    "default": "qwen,qwen-coder",
-    "background": "qwen,qwen-coder",
-    "think": "qwen,qwen-coder",
-    "longContext": "qwen,qwen-coder",
+    "default": "qwen,qwen3-coder-plus",
+    "background": "qwen,qwen3-coder-plus",
+    "think": "qwen,qwen3-coder-plus",
+    "longContext": "qwen,qwen3-coder-plus",
     "longContextThreshold": 60000,
-    "webSearch": "qwen,qwen-coder"
-  }
+    "webSearch": "qwen,qwen3-coder-plus"
+  },
+  "DISABLE_TELEMETRY": true
 }
 EOF
 ```
