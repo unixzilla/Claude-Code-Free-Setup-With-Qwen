@@ -296,6 +296,26 @@ The Qwen access token expires after some time. If you see `401 Unauthorized` err
     ccr restart
     ```
 Your connection should now work again.
+---
+You may occur some errors can't fix:
+```
+⎿  API Error: 400 {"error":{"message":"Too big: expected string to have <=128 
+     characters","code":400},"user_id":"user_3AxxxxxxL"}                                                              
+                                                                               
+```
+
+If you want to reinstall claude and uninstall claude-code-router:
+
+```
+cd ~
+ccr stop
+sudo npm uninstall @musistudio/claude-code-router
+rm -rf .claude
+rm .claude.json
+```
+then go to your project folder, setup the claude again.
+
+
 
 ## 🙌 Author
 Hamid Raza
